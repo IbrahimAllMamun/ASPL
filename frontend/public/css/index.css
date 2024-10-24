@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  .font-outline-1 {
+    -webkit-text-stroke: 1px white;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px white;
+  }
+}
+
+@font-face {
+  font-family: 'fredoka';
+  src:
+    url('./fonts/Fredoka-Regular.woff2') format('woff2'),
+    url('./fonts/Fredoka-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'fredoka';
+  src:
+    url('./fonts/Fredoka-Medium.woff2') format('woff2'),
+    url('./fonts/Fredoka-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'fredoka';
+  src:
+    url('./fonts/Fredoka-SemiBold.woff2') format('woff2'),
+    url('./fonts/Fredoka-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+  @font-face {
+    font-family: 'kanit';
+    src:
+      url('./fonts/kanit-bold-webfont.woff2') format('woff2'),
+      url('./fonts/kanit-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }

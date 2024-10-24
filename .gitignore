@@ -1,0 +1,55 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Django
+*.log
+*.pot
+*.pyc
+*.mo
+*.pyo
+/media
+/staticfiles
+/static
+.DS_Store
+
+# If you are using PostgreSQL, ignore the database URL
+.env
+*.local
+*.postgres
+
+# React - Frontend (Assume frontend directory)
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/dist-ssr
+frontend/.env
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+# Parcel-bundler cache (if used)
+frontend/.cache/
+
+# Webpack
+frontend/webpack-stats.json
+
+# VSCode
+.vscode/*
+*.code-workspace
+
+# IDEs
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# MacOS
+.DS_Store
+
+# Linux
+*.swp
