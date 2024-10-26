@@ -147,7 +147,7 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
         <div className="flex-[2] flex flex-col items-center justify-center px-4">
           {player && (
             <img
-              src={"/images/image_"+player.SL+".jpg"}
+              src={"/images/"+player.SL+".jpg"}
               alt={player.name}
               className="w-[80%] border-8 border-white aspect-[4/4] drop-shadow-3xl object-cover rounded-[10000px] mb-4 transition-opacity duration-500 ease-in-out opacity-100"
             />
