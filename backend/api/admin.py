@@ -3,7 +3,7 @@ from .models import Player, Team, TeamPlayer
 
 @admin.register(Player)
 class PlayerAdmin(admin.ModelAdmin):
-    list_display = ('SL', 'name', 'batch', 'playingPosition', 'status', 'randomized', 'image')
+    list_display = ('SL', 'name', 'batch', 'playingPosition', 'status', 'randomized')
     search_fields = ('name', 'batch', 'playingPosition')
     list_filter = ('batch', 'playingPosition', 'status')
     ordering = ('SL',)

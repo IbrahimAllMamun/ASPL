@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
 import TeamCardForm from '@/components/slides/teamInfo';
-import ACS from '@/components/acs/acs';
+import Stata from '@/components/stata/stata';
 import { fetchPlayerBySL } from '@/services/api'; // Function to fetch player data by SL
 import { nextPlayer, prevPlayer } from '@/utils/playerNavigation'; // Import the navigation functions
 
@@ -119,6 +119,14 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
         </h1>
       </div>
 
+      <div className="fixed left-10 top-10 border-[6px] w-20 h-20 py-4 border-white aspect-[4/4] rounded-[100px] justify-center bg-green-700">
+          {player && (
+            <h1 className="text-white font-extrabold text-center font-kanit text-4xl">
+              {player.SL}
+            </h1>
+          )}
+        </div>
+
       {/* Main Content */}
       <div className="flex flex-grow">
         <div className="flex-none w-[35rem] flex items-center pl-20">
@@ -139,7 +147,7 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
         <div className="flex-[2] flex flex-col items-center justify-center px-4">
           {player && (
             <img
-              src={player.image}
+              src={"/images/image_"+player.SL+".jpg"}
               alt={player.name}
               className="w-[80%] border-8 border-white aspect-[4/4] drop-shadow-3xl object-cover rounded-[10000px] mb-4 transition-opacity duration-500 ease-in-out opacity-100"
             />
@@ -152,18 +160,15 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center w-full p-10 pt-0">
-        <div className="border-[6px] w-20 h-20 py-4 border-white aspect-[4/4] rounded-[100px] justify-center bg-green-700">
-          {player && (
-            <h1 className="text-white font-extrabold text-center font-kanit text-4xl">
-              {player.SL}
-            </h1>
-          )}
-        </div>
+      <div className="flex justify-center bg-black/40 w-full p-0 mb-5">
+      <div className="flex items-center p-0 m-0">
+        <h1 className="text-white p-3 text-5xl text-right font-fredoka">Powered by</h1>
 
-          <div className="flex flex-col shadow-lg rounded-lg text-white p-3 bg-green-600/80 font-fredoka backdrop-blur-sm border-4 border-white">
-            <ACS height={70} />
+          <div className="flex flex-col shadow-lg rounded-full text-white p-3 bg-white font-fredoka backdrop-blur-sm">
+            <Stata height={70} />
           </div>
+          <h1 className="text-white p-3 text-5xl font-fredoka">A Cohort of ISRT, University of Dhaka</h1>
+      </div>
       </div>
 
       {/* Search Modal */}
@@ -190,8 +195,6 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
           </form>
         </div>
       )}
-
-      {/* Navigation Card */}
     </div>
   );
 };

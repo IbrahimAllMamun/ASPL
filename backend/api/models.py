@@ -5,7 +5,6 @@ class Player(models.Model):
     name = models.CharField(max_length=100)
     batch = models.IntegerField()
     playingPosition = models.CharField(max_length=5)
-    image = models.CharField(max_length=50)  # Store image uploads
     status = models.BooleanField(default=False)
     randomized = models.BooleanField(default=False)
 
