@@ -37,12 +37,12 @@ const TeamCard = ({ team, onClick, isExpanded }) => {
       <div className={`h-auto w-full ${isExpanded ? 'my-[20vh]' : 'h-full'}`}>
       <div className={`flex flex-col justify-between  ${isExpanded ? 'h-auto' : 'h-full'}`}>
         <div
-          className={`flex items-center justify-center transition-all duration-300 ${isExpanded ? 'scale-110 flex-col' : ''}`}
+          className={`flex items-center justify-center transition-all duration-300 flex-col ${isExpanded ? 'scale-110' : ''}`}
         >
           <img
             src={`/logo/${team.team_name}.png`}
             alt={team.team_name}
-            className={`w-28 h-28 mb`}
+            className={`w-28 mb`}
           />
           <div className={`font-kanit mb-5 ${isExpanded ? 'text-center' : 'm-5' }`}>
             <h2 className="text-3xl font-bold mb-2">{team.team_name}</h2>
