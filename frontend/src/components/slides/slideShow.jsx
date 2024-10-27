@@ -135,10 +135,10 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
               <span className="bg-green-800 text-white border-2 text-5xl font-semibold me-2 px-4 py-1 rounded-full">
                 {player.playingPosition}
               </span>
-              <h2 className="text-5xl font-semibold mb-4 mt-3">
+              <h2 className="text-5xl font-semibold text-purple-900 mb-4 mt-3">
                 {player.name}
               </h2>
-              <p className="text-4xl font-medium my-4">Batch: {player.batch}</p>
+              <p className="text-4xl font-medium text-purple-900 my-4">Batch: {player.batch}</p>
             </div>
           )}
         </div>

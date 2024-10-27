@@ -5,7 +5,7 @@ from .models import Player, Team, TeamPlayer
 class PlayerAdmin(admin.ModelAdmin):
     list_display = ('SL', 'name', 'batch', 'playingPosition', 'status', 'randomized')
     search_fields = ('name', 'batch', 'playingPosition')
-    list_filter = ('batch', 'playingPosition', 'status')
+    list_filter = ('batch', 'playingPosition', 'status', 'randomized')
     ordering = ('SL',)
 
 @admin.register(Team)

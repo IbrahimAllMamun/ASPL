@@ -4,7 +4,7 @@ class Player(models.Model):
     SL = models.IntegerField(primary_key=True, unique=True)
     name = models.CharField(max_length=100)
     batch = models.IntegerField()
-    playingPosition = models.CharField(max_length=5)
+    playingPosition = models.CharField(max_length=10)
     status = models.BooleanField(default=False)
     randomized = models.BooleanField(default=False)
 
