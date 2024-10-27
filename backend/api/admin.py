@@ -20,4 +20,3 @@ class TeamPlayerAdmin(admin.ModelAdmin):
     list_display = ('team', 'player', 'price')  # Display these fields in the list view
     search_fields = ('team__team_name', 'player')  # Allow search by team name and player name
     list_filter = ('team',)  # Filter by team
-

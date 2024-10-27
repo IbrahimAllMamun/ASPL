@@ -89,7 +89,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Slideshow initialSL={initialSL} totalPlayers={players.length} />}
+            element={<Slideshow initialSL={initialSL} totalPlayers={69} />}
           />
           <Route path="/teams" element={<TeamGrid />} />
         </Routes>

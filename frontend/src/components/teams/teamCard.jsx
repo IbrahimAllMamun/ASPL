@@ -23,8 +23,8 @@ const TeamCard = ({ team, onClick, isExpanded }) => {
     loadPlayers();
   }, [team.id]); // Only re-fetch when team.id changes
 
-  const total_player = 12
-  const max_player = 15
+  const total_player = 11
+  const max_player = 12
   const player_number = Object.keys(players).length;
   if (loading) return <div>Loading...</div>; // Show a loading message
 
@@ -42,9 +42,9 @@ const TeamCard = ({ team, onClick, isExpanded }) => {
           <img
             src={`/logo/${team.team_name}.png`}
             alt={team.team_name}
-            className={`w-28 mb`}
+            className={`w-40 mb`}
           />
-          <div className={`font-kanit mb-5 ${isExpanded ? 'text-center' : 'm-5' }`}>
+          <div className={`font-kanit mb-5 text-center ${isExpanded ? '' : 'm-5' }`}>
             <h2 className="text-3xl font-bold mb-2">{team.team_name}</h2>
             <p className="text-2xl text-gray-600">Players: {player_number}</p>
             <p className="text-2xl text-gray-600">Next Bid Max : {player_number<total_player? (team.balance - (total_player-player_number-1)*20):team.balance}</p>

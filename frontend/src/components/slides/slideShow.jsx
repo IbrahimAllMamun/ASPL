@@ -112,7 +112,7 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
   return (
     <div className="flex flex-col h-full">
       {/* Player Number Display */}
-      <div className="w-full text-center font-kanit font-outline-1 text-green-500 text-[5rem] p-5 pb-0">
+      <div className="w-full text-center font-kanit font-outline-1 text-orange-400 text-[5rem] p-5 pb-0">
         <h1 className="drop-shadow-[0_0px_10px_rgba(0,0,0,1)]">
           {/* Applied Statistics Premier League 2024 */}
           ASPL - 2024
@@ -135,10 +135,10 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
               <span className="bg-green-800 text-white border-2 text-5xl font-semibold me-2 px-4 py-1 rounded-full">
                 {player.playingPosition}
               </span>
-              <h2 className="text-5xl font-semibold text-purple-900 mb-4 mt-3">
+              <h2 className="text-5xl font-semibold text-black mb-4 mt-3">
                 {player.name}
               </h2>
-              <p className="text-4xl font-medium text-purple-900 my-4">Batch: {player.batch}</p>
+              <p className="text-4xl font-medium text-black my-4">Batch: {player.batch}</p>
             </div>
           )}
         </div>
@@ -149,7 +149,7 @@ const Slideshow = ({ initialSL, totalPlayers }) => {
             <img
               src={"/images/"+player.SL+".jpg"}
               alt={player.name}
-              className="w-[80%] border-8 border-white aspect-[4/4] drop-shadow-3xl object-cover rounded-[10000px] mb-4 transition-opacity duration-500 ease-in-out opacity-100"
+              className="w-[80%] border-8 border-orange-500 aspect-[4/4] drop-shadow-3xl object-cover rounded-[10000px] mb-4 transition-opacity duration-500 ease-in-out opacity-100"
             />
           )}
         </div>
